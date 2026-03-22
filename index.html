@@ -1124,7 +1124,7 @@ footer span { color: rgba(212,175,55,0.5); }
 </header>
 
 <!-- FILTER -->
-<nav class="filter-section" aria-label="Filtro por género">
+<nav id="coleccion" class="filter-section" aria-label="Filtro por género">
   <span class="filter-label">Colección</span>
   <button class="filter-btn active" data-filter="all">Todos</button>
   <div class="filter-divider"></div>
@@ -1217,7 +1217,7 @@ footer span { color: rgba(212,175,55,0.5); }
   <img src="Logo.png" alt="Cefiro Parfums" class="footer-logo-img" onerror="this.style.display='none'; document.querySelector('.footer-brand').style.display='block'">
   <div class="footer-brand" style="display:none">Cefiro Parfums</div>
 
-  <button class="back-to-top" onclick="document.querySelector('.filter-section').scrollIntoView({behavior:'smooth'})">
+  <button class="back-to-top" onclick="document.getElementById('coleccion').scrollIntoView({behavior:'smooth'})">
     <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
     <span>Volver a la Colección</span>
   </button>
