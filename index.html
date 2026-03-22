@@ -401,13 +401,12 @@ header::before {
   filter: sepia(0.1) brightness(0.9);
 }
 
-/* Mitad derecha — Botella_perfume.png centrada con opacidad */
+/* Mitad derecha — Botella_perfume.png centrada sin opacidad */
 .card-image-right {
   position: absolute;
   right: 0; top: 0;
   width: 50%; height: 100%;
   overflow: hidden;
-  opacity: 0.5;
 }
 .card-image-right img {
   width: 100%;
@@ -435,7 +434,6 @@ header::before {
   filter: sepia(0) brightness(1);
 }
 .card:hover .card-image-left { opacity: 0.7; }
-.card:hover .card-image-right { opacity: 0.65; }
 
 .card-placeholder {
   width: 100%;
@@ -1217,7 +1215,7 @@ footer span { color: rgba(212,175,55,0.5); }
   <img src="Logo.png" alt="Cefiro Parfums" class="footer-logo-img" onerror="this.style.display='none'; document.querySelector('.footer-brand').style.display='block'">
   <div class="footer-brand" style="display:none">Cefiro Parfums</div>
 
-  <button class="back-to-top" onclick="document.getElementById('coleccion').scrollIntoView({behavior:'smooth'})">
+  <button class="back-to-top" onclick="(function(){ var el = document.getElementById('coleccion'); var y = el.getBoundingClientRect().top + window.pageYOffset; window.scrollTo({top: y, behavior: 'smooth'}); })()">
     <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
     <span>Volver a la Colección</span>
   </button>
